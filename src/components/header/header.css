@@ -1,0 +1,129 @@
+header{
+    height: 100vh;
+    padding-top: 3rem;
+    overflow: hidden;
+}
+.header-container{
+    position: relative;
+    height: 100%;
+    text-align: center;
+}
+.bgheader-l{
+    background: linear-gradient(rgba(77, 181, 255, 0.6), #fff,rgba(77, 181, 255, 0.2)), url("../../assets/andrej-lisakov-3A4XZUopCJA-unsplash.jpg") center/cover no-repeat fixed;
+}
+.header-container>:first-child{
+    background: var(--primary-color);
+    width: 5rem;
+    padding: .2rem;
+    border-radius: 5rem;
+    margin: 0 auto 1.5rem;
+}
+.header-container>:first-child>div{
+    position: relative;
+    left: 24px;
+    bottom: 0;
+    font-size: 1.5rem;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.dark-mode{
+    animation: darkMode  1s forwards;
+
+}
+.light-mode{
+    animation: lightMode  1s forwards;
+
+}
+
+.title{
+  position: absolute;
+  top: 7rem;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.title>h1{
+    animation: slideFromLeft 2s ease-in-out ;
+}
+.title>h5{
+    animation: slideFromRight  2s ease-in-out;
+}
+.header-btns{
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 6rem;
+    justify-content: center;
+    animation: show 2s ease-in-out ;
+}
+.me{
+    width: 35rem;
+    position: absolute;
+    left: calc(50% - 18rem);
+    overflow: hidden;
+}
+
+.header-socials{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+}
+.header-socials::after{
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background: var(--primary-color);
+}
+.scroll-down{
+    position: absolute;
+    right: -2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-size: .9rem;
+    
+}
+
+.rightimg{
+    position: relative;
+    bottom: 5rem;
+    z-index: -11;
+    width: 250px;
+    left: 70% !important;
+}
+.leftimg{
+    position: relative;
+    bottom: 10rem;
+    z-index: -11;
+    width: 250px;
+    left:7% !important;
+}
+@media screen and (max-width: 600px){
+   header{
+    height: 100vh;
+   }
+   .header-socials,.scroll-down{
+    display: none;
+   }
+}
+
+@media screen and (max-width: 400px){
+    .title{
+        top: 7rem;
+      }
+      .title>h1{
+        font-size: xx-large;
+      }
+      .header-btns{
+        gap: 1rem;
+        margin-top: 5.5rem;
+        font-size: small;
+    }
+    
+}

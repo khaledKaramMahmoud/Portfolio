@@ -1,0 +1,85 @@
+.slick-slide>div{
+    margin: 0 .7rem;
+}
+.slick-list{
+    margin: 0 .7rem;
+}
+.slick-next:before,
+.slick-prev:before
+{
+    color: var(--slickarrow) !important;
+}
+.slick-dots li button:before {
+    color:var(--white-color) !important;
+}
+.card{
+    border-radius: 8px;
+    overflow: hidden;
+    height: 340px;
+    position: relative;   
+}
+.card-img{
+    width: 100%;
+    height: 100%;
+}
+.card-img>img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.card-details{
+    word-break: break-all;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0px;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    padding: 8px;
+    color: #fff;
+}
+
+.card:hover .card-details{
+    background: rgba(0, 0,0,.8);
+    height: 100%;
+    bottom: 0px;
+    visibility: visible;
+    opacity: 1;
+    animation: portfolio  .8s ease ;
+}
+.card-details h1{
+    text-transform: uppercase;
+    margin-block:1.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.card-details p{
+    margin-block:1.5rem;
+    color: var(--card-p);
+    font-size: small;
+}
+.card-btn{
+    display: flex;
+    gap: 1rem;
+    margin-block:1rem;
+}
+
+@media screen and (max-width: 600px){
+  
+.slick-next{
+    left: 98.5% !important;
+}
+.slick-prev{
+    left: -.8rem !important;
+}
+}
+@media screen and (max-width: 400px){
+  
+.slick-next{
+    left: 96% !important;
+}
+.slick-prev{
+    left: -.6rem !important;
+}
+}
